@@ -5,7 +5,7 @@
  */
 import LensManager from '/core/ui/lenses/lens-manager.js';
 import { OVERLAY_PRIORITY } from '/base-standard/ui/utilities/utilities-overlay.js';
-import { showHexGridsOption } from '/mod/mod-options.js';
+import { showHexGridsOption } from '/mod/csl-options.js';
 
 const hexGridColor = 0x60000000;
 class HexGridLensLayer {

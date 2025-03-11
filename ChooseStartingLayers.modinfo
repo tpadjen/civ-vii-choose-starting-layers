@@ -14,35 +14,63 @@
         </Criteria>
     </ActionCriteria>
     <ActionGroups>
-         <ActionGroup id="tbq_choose_starting_layers_shell" scope="shell" criteria="always">
+        <ActionGroup id="tbq_options_api_shell" scope="shell" criteria="always">
+            <Properties>
+				<LoadOrder>10</LoadOrder>
+			</Properties>
             <Actions>
-                <UpdateText>
-					<Item>/text/localization.sql</Item>
-				</UpdateText>
                 <UIScripts>
-                    <Item>/mod/init.js</Item>
+                    <Item>mod/options-api/extend-options.js</Item>
                 </UIScripts>
                 <ImportFiles>
-                    <Item>/mod/options/options-helpers.js</Item>
-                    <Item>/mod/options/options.js</Item>
-                    <Item>/mod/options/storage.js</Item>
+                    <Item>mod/options-api/mod-options-store.js</Item>
+                </ImportFiles>
+            </Actions>
+        </ActionGroup>
+        <ActionGroup id="tbq_options_api_game" scope="game" criteria="always">
+            <Properties>
+				<LoadOrder>10</LoadOrder>
+			</Properties>
+            <Actions>
+                <UIScripts>
+                    <Item>mod/options-api/extend-options.js</Item>
+                </UIScripts>
+                <ImportFiles>
+                    <Item>mod/options-api/mod-options-store.js</Item>
+                </ImportFiles>
+            </Actions>
+        </ActionGroup>
+        <ActionGroup id="tbq_choose_starting_layers_shell" scope="shell" criteria="always">
+            <Properties>
+				<LoadOrder>20</LoadOrder>
+			</Properties>
+            <Actions>
+                <UpdateText>
+					<Item>text/localization.sql</Item>
+				</UpdateText>
+                <UIScripts>
+                    <Item>mod/csl.js</Item>
+                </UIScripts>
+                <ImportFiles>
+                    <Item>mod/csl-options.js</Item>
                 </ImportFiles>
             </Actions>
         </ActionGroup>
         <ActionGroup id="tbq_choose_starting_layers_game" scope="game" criteria="always">
+            <Properties>
+				<LoadOrder>20</LoadOrder>
+			</Properties>
             <Actions>
                 <UpdateText>
-					<Item>/text/localization.sql</Item>
+					<Item>text/localization.sql</Item>
 				</UpdateText>
                 <UIScripts>
-                    <Item>/mod/inits.js</Item>
+                    <Item>mod/csl.js</Item>
                 </UIScripts>
                 <ImportFiles>
-                    <Item>/mod/options/options-helpers.js</Item>
-                    <Item>/mod/options/options.js</Item>
-                    <Item>/mod/options/storage.js</Item>
-                    <Item>/base-standard/ui/lenses/layer/lens/default-lens.js</Item>
-                    <Item>/base-standard/ui/lenses/layer/hexgrid-layer.js</Item>
+                    <Item>mod/csl-options.js</Item>
+                    <Item>base-standard/ui/lenses/layer/lens/default-lens.js</Item>
+                    <Item>base-standard/ui/lenses/layer/hexgrid-layer.js</Item>
                 </ImportFiles>
             </Actions>
         </ActionGroup>

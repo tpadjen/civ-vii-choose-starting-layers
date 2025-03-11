@@ -3,7 +3,7 @@
  * @copyright 2022-2023, Firaxis Games
  * @description Default lens most often active during gameplay
  */
-import { showHexGridsOption, showYieldsOption } from '/mod/mod-options.js';
+import { showHexGridsOption, showYieldsOption } from '/mod/csl-options.js';
 import LensManager from '/core/ui/lenses/lens-manager.js';
 
 class DefaultLens {
@@ -16,7 +16,7 @@ class DefaultLens {
         const allowedLayers = [
             'fxs-appeal-layer',
         ];
-
+  
         (showHexGridsOption.value ? activeLayers : allowedLayers).push('fxs-hexgrid-layer');
         (showYieldsOption.value ? activeLayers : allowedLayers).push('fxs-yields-layer');
 

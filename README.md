@@ -8,3 +8,4 @@ A Civ VII mod that adds options to the game settings menu to choose to show or h
     * Windows: `%localappdata%\Firaxis Games\Sid Meier's Civilization VII\Mods`
     * MacOS: `~/Library/Application Support/Civilization VII/Mods`
     * Steam Deck\Linux: `~/My Games/Sid Meier's Civilization VII/Mods/`
+3. Also requires installation of the [Options API mod](https://forums.civfanatics.com/resources/[TODO - placeholder]/)

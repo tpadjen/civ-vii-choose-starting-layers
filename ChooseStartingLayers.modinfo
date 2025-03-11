@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Mod id="tbq_choose_starting_layers" version="0.0.0"
+<Mod id="tbq_choose_starting_layers" version="0.1.0"
     xmlns="ModInfo">
     <Properties>
         <Name>Choose Starting Layers</Name>

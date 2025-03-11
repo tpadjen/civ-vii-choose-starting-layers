@@ -28,14 +28,3 @@ export const showYieldsOption = Options.addModOption({
     label: "LOC_MOD_CSL_SHOW_YIELDS_ON_LOAD_OPTION",
     description: "LOC_MOD_CSL_SHOW_YIELDS_ON_LOAD_OPTION_DESC",
 });
-
-// Access an option value directly:
- 
-// console.warn(`Option '${showHexGridsOption.id}' is initially set to: ${showHexGridsOption.value}`);
-
-
-// or listen for changes (only fired when committed): 
- 
-// showHexGridsOption.addChangeListener((value) => 
-//     console.warn(`Option '${showHexGridsOption.id}' updated to: ${value}`)
-// );

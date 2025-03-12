@@ -16,11 +16,18 @@
   },
   "plugins": {
     "@j-ulrich/release-it-regex-bumper": {
-      "out": {
-        "file": "ChooseStartingLayers.modinfo",
-        "search": "tbq_choose_starting_layers\" version=\"{{semver}}\"",
-        "replace": "tbq_choose_starting_layers\" version=\"{{versionWithoutPrerelease}}\""
-      }
+      "out": [
+        {
+          "file": "ChooseStartingLayers.modinfo",
+          "search": "tbq_choose_starting_layers\" version=\"{{semver}}\"",
+          "replace": "tbq_choose_starting_layers\" version=\"{{versionWithoutPrerelease}}\""
+        },
+        {
+          "file": "ChooseStartingLayers.modinfo",
+          "search": "<Version>{{semver}}",
+          "replace": "<Version>{{versionWithoutPrerelease}}"
+        }
+      ]
     }
   }
 }

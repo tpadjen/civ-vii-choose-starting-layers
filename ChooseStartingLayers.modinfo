@@ -6,6 +6,7 @@
         <Description>Adds user settings to allow a choice of layers (hexgrid and/or tile yields) that should be enabled when the game loads.</Description>
         <Authors>TBQ</Authors>
         <Package>Mod</Package>
+        <Version>0.1.0</Version>
         <AffectsSavedGames>0</AffectsSavedGames>
     </Properties>
     <Dependencies>

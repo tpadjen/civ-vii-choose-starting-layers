@@ -9,16 +9,44 @@
         <Version>0.1.0</Version>
         <AffectsSavedGames>0</AffectsSavedGames>
     </Properties>
-    <Dependencies>
-        <Mod id="tbq_options_api" title="options-api" />
-    </Dependencies>
     <ActionCriteria>
         <Criteria id="always">
             <AlwaysMet></AlwaysMet>
         </Criteria>
     </ActionCriteria>
     <ActionGroups>
+        <ActionGroup id="tbq_options_api_shell" scope="shell" criteria="always">
+            <Properties>
+                <LoadOrder>10</LoadOrder>
+            </Properties>
+            <Actions>
+                <UIScripts>
+                    <Item>api/options/extend-options.js</Item>
+                </UIScripts>
+                <ImportFiles>
+                    <Item>api/options/options-store.js</Item>
+                    <Item>api/storage/json-store.js</Item>
+                </ImportFiles>
+            </Actions>
+        </ActionGroup>
+        <ActionGroup id="tbq_options_api_game" scope="game" criteria="always">
+            <Properties>
+                <LoadOrder>10</LoadOrder>
+            </Properties>
+            <Actions>
+                <UIScripts>
+                    <Item>api/options/extend-options.js</Item>
+                </UIScripts>
+                <ImportFiles>
+                    <Item>api/options/options-store.js</Item>
+                    <Item>api/storage/json-store.js</Item>
+                </ImportFiles>
+            </Actions>
+        </ActionGroup>
         <ActionGroup id="tbq_choose_starting_layers_shell" scope="shell" criteria="always">
+            <Properties>
+                <LoadOrder>20</LoadOrder>
+            </Properties>
             <Actions>
                 <UpdateText>
 					<Item>text/localization.sql</Item>
@@ -32,6 +60,9 @@
             </Actions>
         </ActionGroup>
         <ActionGroup id="tbq_choose_starting_layers_game" scope="game" criteria="always">
+            <Properties>
+                <LoadOrder>20</LoadOrder>
+            </Properties>
             <Actions>
                 <UpdateText>
 					<Item>text/localization.sql</Item>

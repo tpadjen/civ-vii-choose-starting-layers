@@ -1,12 +1,12 @@
+import { extendOptions } from '/api/options/extend-options.js';
 import { Options, OptionType } from '/core/ui/options/model-options.js';
 import { CategoryType } from '/core/ui/options/options-helpers.js';
 
 // needs to load before adding new options to Mods category
-import '/core/ui/options/options.js';  
+import '/core/ui/options/options.js';
 
+extendOptions({ namespace: 'tbq-csl' });
 const MOD_OPTIONS_GROUP = 'choose_starting_layers';
-
-Options.setupModOptions({ namespace: 'tbq-csl' });
 
 export const showHexGridsOption = Options.addModOption({
     id: 'show-hexgrids',

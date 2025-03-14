@@ -3,38 +3,36 @@ import { OptionsStore } from "./options-store.js";
 import { Options } from "/core/ui/options/model-options.js";
 import { CategoryData, CategoryType } from '/core/ui/options/options-helpers.js';
 
-CategoryType["Mods"] = "mods";
-CategoryData[CategoryType.Mods] = {
-    title: "LOC_UI_CONTENT_MGR_SUBTITLE",
-    description: "LOC_UI_CONTENT_MGR_SUBTITLE_DESCRIPTION",
-};
+export function extendOptions({ namespace, settingsKey }) {
+    const dataStore = new JSONStore(namespace ?? 'default');
+    const optionsStore = new OptionsStore(dataStore, settingsKey ?? 'settings');
 
-function extendOptions() {
+    CategoryType["Mods"] = "mods";
+    CategoryData[CategoryType.Mods] = {
+        title: "LOC_UI_CONTENT_MGR_SUBTITLE",
+        description: "LOC_UI_CONTENT_MGR_SUBTITLE_DESCRIPTION",
+    };
+
     const proto = Object.getPrototypeOf(Options);
 
     // commit options when user clicks save
     const commitOptions = proto.commitOptions;
     proto.commitOptions = function(...args) {
         commitOptions.apply(this, args);
-        this.optionsStore?.commitOptions();
+        optionsStore?.commitOptions();
     }
 
     const resetOptionsToDefault = proto.resetOptionsToDefault;
     proto.resetOptionsToDefault = function(...args) {
         resetOptionsToDefault.apply(this, args);
-        this.optionsStore?.resetToDefaults();
+        optionsStore?.resetToDefaults();
     }
 
     // user cancelled options changes, restore to previous values
     const restore = proto.restore;
     proto.restore = function(...args) {
         restore.apply(this, args);
-        this.optionsStore?.restore();
-    }
-
-    proto.setupModOptions = function({ namespace, settingsKey }) {
-        this.dataStore = new JSONStore(namespace ?? 'default');
-        this.optionsStore = new OptionsStore(this.dataStore, settingsKey ?? 'settings');
+        optionsStore?.restore();
     }
 
     proto.addModOption = function(modOption) {
@@ -60,11 +58,9 @@ function extendOptions() {
             }
         };
 
-        this.optionsStore?.addOption(newOption);
+        optionsStore?.addOption(newOption);
         this.addInitCallback(() => Options.addOption(newOption));
 
         return newOption;
     }
 }
-
-extendOptions();

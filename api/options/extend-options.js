@@ -1,6 +1,13 @@
 import { JSONStore } from "../storage/json-store.js";
 import { OptionsStore } from "./options-store.js";
 import { Options } from "/core/ui/options/model-options.js";
+import { CategoryData, CategoryType } from '/core/ui/options/options-helpers.js';
+
+CategoryType["Mods"] = "mods";
+CategoryData[CategoryType.Mods] = {
+    title: "LOC_UI_CONTENT_MGR_SUBTITLE",
+    description: "LOC_UI_CONTENT_MGR_SUBTITLE_DESCRIPTION",
+};
 
 function extendOptions() {
     const proto = Object.getPrototypeOf(Options);

@@ -1,8 +1,8 @@
-import { Options, OptionType } from "/core/ui/options/model-options.js";
+import { Options, OptionType } from '/core/ui/options/model-options.js';
 import { CategoryType } from '/core/ui/options/options-helpers.js';
 
-// Add a dependency on the Options module to ensure standard game options are loaded before the mod's
-import '/core/ui/options/options.js';
+// needs to load before adding new options to Mods category
+import '/core/ui/options/options.js';  
 
 const MOD_OPTIONS_GROUP = 'choose_starting_layers';
 
@@ -10,7 +10,7 @@ Options.setupModOptions({ namespace: 'tbq-csl' });
 
 export const showHexGridsOption = Options.addModOption({
     id: 'show-hexgrids',
-    category: CategoryType.Game,
+    category: CategoryType.Mods,
     group: MOD_OPTIONS_GROUP,
     type: OptionType.Checkbox,
     defaultValue: true,
@@ -20,7 +20,7 @@ export const showHexGridsOption = Options.addModOption({
 
 export const showYieldsOption = Options.addModOption({
     id: 'show-yields',
-    category: CategoryType.Game,
+    category: CategoryType.Mods,
     group: MOD_OPTIONS_GROUP,
     type: OptionType.Checkbox,
     defaultValue: false,

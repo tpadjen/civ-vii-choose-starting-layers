@@ -66,6 +66,19 @@
 			('LOC_MOD_CSL_SHOW_YIELDS_ON_LOAD_OPTION_DESC', 'pt_BR', "Mostra a camada de rendimentos dos terrenos ao carregar o jogo. As camadas ainda podem ser alternadas com os filtros do minimapa ou atalhos de teclado."),
 			('LOC_MOD_CSL_SHOW_YIELDS_ON_LOAD_OPTION_DESC', 'ru_RU', "Показывать слой доходности клеток при загрузке игры. Слои можно переключать с помощью фильтров мини-карты или горячих клавиш."),
 			('LOC_MOD_CSL_SHOW_YIELDS_ON_LOAD_OPTION_DESC', 'zh_Hans_CN', "游戏加载时显示单元格收益层。仍可使用小地图过滤器或快捷键切换图层。"),
-			('LOC_MOD_CSL_SHOW_YIELDS_ON_LOAD_OPTION_DESC', 'zh_Hant_HK', "遊戲加載時顯示單元格收益層。仍可使用小地圖篩選器或快捷鍵切換圖層。");
+			('LOC_MOD_CSL_SHOW_YIELDS_ON_LOAD_OPTION_DESC', 'zh_Hant_HK', "遊戲加載時顯示單元格收益層。仍可使用小地圖篩選器或快捷鍵切換圖層。"),
+
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'en_US',	"Mods"),
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'de_DE',	"Mods"),
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'es_ES',	"Mods"),
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'fr_FR',	"Mods"),
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'it_IT',	"Mod"),
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'ja_JP',	"モッド"),
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'ko_KR',	"모드"),
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'pl_PL',	"Mods"),
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'pt_BR',	"Mods"),
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'ru_RU',	"Моды"),
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'zh_Hans_CN',	"模组"),
+			('LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',		'zh_Hant_HK',	"模組");
 --========================================================================================================================
 --========================================================================================================================

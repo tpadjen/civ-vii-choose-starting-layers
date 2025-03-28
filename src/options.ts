@@ -2,9 +2,6 @@ import { extendOptions } from './api/extend-options.js'
 import { ExtendedCategoryType, ExtendedOptions } from './api/types.js'
 import { OptionType } from '/core/ui/options/model-options.js'
 
-// needs to load before adding new options to Mods category
-// import '/core/ui/options/options.js'
-
 extendOptions({ namespace: 'tbq-csl' })
 const MOD_OPTIONS_GROUP = 'choose_starting_layers'
 

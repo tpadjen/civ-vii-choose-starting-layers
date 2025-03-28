@@ -16,6 +16,10 @@ export function extendOptions({
     namespace?: string
     settingsKey?: string
 }) {
+    const proto = Object.getPrototypeOf(Options)
+
+    if (proto.addModOption) return // already extended
+
     const dataStore = new JSONStore(namespace ?? 'default')
     const optionsStore = new OptionsStore(dataStore, settingsKey ?? 'settings')
 
@@ -26,8 +30,6 @@ export function extendOptions({
         title: 'LOC_MOD_CSL_MOD_OPTIONS_MENU_CATEGORY',
         description: 'LOC_UI_CONTENT_MGR_SUBTITLE_DESCRIPTION',
     }
-
-    const proto = Object.getPrototypeOf(Options)
 
     // commit options when user clicks save
     const commitOptions = proto.commitOptions
